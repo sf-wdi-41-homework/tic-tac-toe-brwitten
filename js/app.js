@@ -4,3 +4,5 @@ $(document).ready(function() {
   // goes inside this function
 
 });
+
+console.log("I'm ready!")
