@@ -1,8 +1,18 @@
 // wait for the DOM to finish loading
 $(document).ready(function() {
-  // all code to manipulate the DOM
-  // goes inside this function
+
+  console.log("ready in ready function");
+
+  var greeting = $('#a1');
+  greeting.on('mouseover', popUpYay);
 
 });
 
-console.log("I'm ready!")
+console.log("between functions");
+
+  function popUpYay(event){
+    alert('Yay!');
+
+  }
+
+console.log("end of text");
