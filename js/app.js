@@ -4,7 +4,7 @@ $(document).ready(function() {
   console.log("ready in ready function");
 
   var greeting = $('#a1');
-  greeting.on('mouseover', popUpYay);
+  greeting.on('click', popUpYay);
 
 });
 
@@ -12,6 +12,7 @@ console.log("between functions");
 
   function popUpYay(event){
     alert('Yay!');
+    $('#a1').css("background-color", "orange");
 
   }
 
