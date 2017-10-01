@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 });
 
-var isPlayerOnesTurn = true;
+var isPlayerOnesTurn = false;
 
 var boardGame = {};
 
@@ -32,9 +32,11 @@ var boardGame = {};
 
   function imageAppear(event){
     var id = event.currentTarget;
-    // if player ones turn input this image
-    $(id).css("background-image", "url('images/moustache-icon.png')");
-    // else input a different image
+    if (isPlayerOnesTurn == true) {
+      $(id).css("background-image", "url('images/coffee.png')");
+    } else {
+      $(id).css("background-image", "url('images/beer.jpg')");
+    };
     $(id).css("background-repeat", "no-repeat");
     $(id).css("background-position", "center");
     console.log($(id).css("background-image"));
