@@ -43,7 +43,20 @@ var boardGame = {};
       $(id).css("background-repeat", "no-repeat");
       $(id).css("background-position", "center");
     }
-    if ((boardGame["a1"] == boardGame["a2"]) && (boardGame["a2"] == boardGame["a3"])) {
+      // winning positions
+      // first three are vertical winners
+    if (((boardGame["a1"] == boardGame["a2"]) && (boardGame["a2"] == boardGame["a3"]) && boardGame["a1"] != undefined) ||
+       ((boardGame["b1"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["b3"]) && boardGame["b1"] != undefined) ||
+       ((boardGame["c1"] == boardGame["c2"]) && (boardGame["c2"] == boardGame["c3"]) && boardGame["c1"] != undefined) ||
+      // next three are horizontal winners
+       ((boardGame["a1"] == boardGame["b1"]) && (boardGame["b1"] == boardGame["c1"]) && boardGame["c1"] != undefined) ||
+       ((boardGame["a2"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c2"]) && boardGame["c2"] != undefined) ||
+       ((boardGame["a3"] == boardGame["b3"]) && (boardGame["b3"] == boardGame["c3"]) && boardGame["c3"] != undefined) ||
+       // diagnol top to bottom winner
+       ((boardGame["a1"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c3"]) && boardGame["c3"] != undefined) ||
+       // diagnol bottom to top winner
+       ((boardGame["a3"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c1"]) && boardGame["c1"] != undefined))
+     {
       alert("We have a winner");
       haveAWinner = true;
       return;
