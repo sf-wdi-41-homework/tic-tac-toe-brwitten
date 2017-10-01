@@ -15,32 +15,35 @@ $(document).ready(function() {
 
 });
 
-var isPlayerOnesTurn = false;
+var isPlayerOnesTurn = true;
 
-var boardGame = {};
+var boardGame = [];
 
 // whenever a square is clicked, check to see if the square is in boardGame
 // if the square is in boardGame, break
 // if the square is not in boardGame, display image of current turn
 // pop square into boardGame object
 // check to see if there is a winner or no more empty spaces
-// if game continues, change turn
 
 
 
-// updating square image to icon
-
+// function to update square image to icon
   function imageAppear(event){
+    // using the event listener to the id of the sqaure that was selected
     var id = event.currentTarget;
+    // if / else to input correct image and update whose turn it is
     if (isPlayerOnesTurn == true) {
       $(id).css("background-image", "url('images/coffee.png')");
+      isPlayerOnesTurn = false;
     } else {
       $(id).css("background-image", "url('images/beer.jpg')");
+      isPlayerOnesTurn = true;
     };
+    // center the image in the square and no tiling
     $(id).css("background-repeat", "no-repeat");
     $(id).css("background-position", "center");
-    console.log($(id).css("background-image"));
-    console.log(event.currentTarget);
+    boardGame.push(id);  // adding square id to the board game array
+    console.log(isPlayerOnesTurn);
   }
 
 
