@@ -60,11 +60,15 @@ var boardGame = {};
        ((boardGame["a1"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c3"]) && boardGame["c3"] != undefined) ||
        // diagnol bottom to top winner
        ((boardGame["a3"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c1"]) && boardGame["c1"] != undefined))
-     {
-      alert("We have a winner! Hit reset to play again");
-      haveAWinner = true;
-      return;
-    };
+       {
+            if (isPlayerOnesTurn == true) {
+            alert("Craft beer is the winner! Hit reset to play again");
+          } else {
+            alert("Craft coffee is the winner! Hit reset to play again");
+        };
+        haveAWinner = true;
+        return;
+      };
     // adding check to see if squares are still free
     var spacesTaken = Object.keys(boardGame);
     if (spacesTaken.length === 9) {
