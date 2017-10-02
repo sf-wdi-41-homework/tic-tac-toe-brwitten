@@ -19,6 +19,7 @@ h4 {
 #activeTurn {
   text-align: center;
   font-size: 25px;
+  margin-top: 15px;
 }
 
 .row {
@@ -30,11 +31,15 @@ h4 {
   height: 150px;
 }
 
+#spotify {
+  align-self: center;
+  margin-top: 15px;
+}
+
 #resetButton {
-  border-radius: 5px;
-  margin-top: 25px;
-  font-size: 20px;
-  align-items: center;
+  margin-left: 47%;
+  margin-right: 47%;
+  margin-top: 20px;
 }
 
 footer {

@@ -33,12 +33,13 @@ var boardGame = {};
       if ((isPlayerOnesTurn == true) && (haveAWinner == false)) {
         boardGame[square] = "player1";
         $(id).css("background-image", "url('images/coffee.png')");
-        $('#activeTurn').html('Craft beer - your turn! <img src="images/beer.png" height="20" width="20">');
+        $(id).css("background-color", "white");
+        $('#activeTurn').html('Craft beer - your turn! <img src="images/beer.png" height="30" width="30">');
         isPlayerOnesTurn = false;
       } else if ((isPlayerOnesTurn == false) && (haveAWinner == false)) {
         boardGame[square] = "player2";
         $(id).css("background-image", "url('images/beer.png')");
-        $('#activeTurn').html('Craft coffee - your turn! <img src="images/coffee.png" height="20" width="20">');
+        $('#activeTurn').html('Craft coffee - your turn! <img src="images/coffee.png" height="30" width="30">');
         isPlayerOnesTurn = true;
       };
       // center the image in the square and no tiling
