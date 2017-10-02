@@ -1,8 +1,7 @@
 // wait for the DOM to finish loading
 $(document).ready(function() {
 
-  console.log("ready in ready function");
-
+// adding listeners to call the imageApper function for each square
   $('#a1').on('click', imageAppear);
   $('#a2').on('click', imageAppear);
   $('#a3').on('click', imageAppear);
@@ -61,10 +60,10 @@ var boardGame = {};
       haveAWinner = true;
       return;
     };
-    // console.log(boardGame["a1"]);
-    // console.log(boardGame["a2"]);
-    // console.log(boardGame["a3"]);
+    // adding check to see if squares are still free
+    var spacesTaken = Object.keys(boardGame);
+    if (spacesTaken.length === 9) {
+      alert("We have a draw! Reset the game to play again.");
+      return;
+    };
   }
-
-
-console.log("end of text");
