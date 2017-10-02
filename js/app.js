@@ -35,12 +35,13 @@ var boardGame = {};
         isPlayerOnesTurn = false;
       } else if ((isPlayerOnesTurn == false) && (haveAWinner == false)) {
         boardGame[square] = "player2";
-        $(id).css("background-image", "url('images/beer.jpg')");
+        $(id).css("background-image", "url('images/beer.png')");
         isPlayerOnesTurn = true;
       };
       // center the image in the square and no tiling
       $(id).css("background-repeat", "no-repeat");
       $(id).css("background-position", "center");
+      $(id).css("background-size", "100%");
     }
       // winning positions
       // first three are vertical winners
@@ -56,14 +57,14 @@ var boardGame = {};
        // diagnol bottom to top winner
        ((boardGame["a3"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c1"]) && boardGame["c1"] != undefined))
      {
-      alert("We have a winner");
+      alert("We have a winner! Hit reset to play again");
       haveAWinner = true;
       return;
     };
     // adding check to see if squares are still free
     var spacesTaken = Object.keys(boardGame);
     if (spacesTaken.length === 9) {
-      alert("We have a draw! Reset the game to play again.");
+      alert("We have a draw! Hit reset to play again.");
       return;
     };
   }

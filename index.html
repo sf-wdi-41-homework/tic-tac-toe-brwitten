@@ -24,19 +24,17 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1>Tic Tac Bro</h1>
+          <h1>Tic Tac Hipster Bro</h1>
+          <img src="images/mustache.png" height:"42" width="90">
+          <h4> Special Edition: Craft Beer vs. Craft Coffee </h4>
           <hr>
         </div>
       </div>
       <div class="row">
-
-        <!-- a column represents our game board -->
-        <!-- the `offset` class helps us center the board -->
         <div class="col-md-6 col-md-offset-3" id="board">
 
-          <!-- you can put rows inside of columns! -->
-          <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
           <!-- a1,b1,c1 etc. indicates squares placement in board, same format as Excel -->
+
           <div class="row">
             <div class="col-md-4 box" id="a1"></div>
             <div class="col-md-4 box" id="b1"></div>
@@ -53,7 +51,7 @@
             <div class="col-md-4 box" id="c3"></div>
           </div>
 
-          <p class="button">
+          <p id="resetButton">
 		          <input type="button" value="Reset Game" onClick="window.location.reload()">
 	        </p>
 
