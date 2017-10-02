@@ -18,6 +18,7 @@ var isPlayerOnesTurn = true;
 var haveAWinner = false;
 var boardGame = {};
 
+
 // check to see if there is a winner or no more empty spaces
 
 // function to update square image to icon
@@ -32,10 +33,12 @@ var boardGame = {};
       if ((isPlayerOnesTurn == true) && (haveAWinner == false)) {
         boardGame[square] = "player1";
         $(id).css("background-image", "url('images/coffee.png')");
+        $('#activeTurn').html('Craft beer - your turn! <img src="images/beer.png" height="20" width="20">');
         isPlayerOnesTurn = false;
       } else if ((isPlayerOnesTurn == false) && (haveAWinner == false)) {
         boardGame[square] = "player2";
         $(id).css("background-image", "url('images/beer.png')");
+        $('#activeTurn').html('Craft coffee - your turn! <img src="images/coffee.png" height="20" width="20">');
         isPlayerOnesTurn = true;
       };
       // center the image in the square and no tiling
