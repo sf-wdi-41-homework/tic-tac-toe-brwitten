@@ -13,6 +13,7 @@ h4 {
 
 #board {
   margin-top: 10px;
+  background-color: gray;
 }
 
 #activeTurn {
@@ -30,13 +31,12 @@ h4 {
 }
 
 #resetButton {
-  border-radius: 2px;
-  background-color: white;
+  border-radius: 5px;
   margin-top: 25px;
-  margin-left: 42%;
-  margin-right: 42%;
+  font-size: 20px;
+  align-items: center;
 }
 
-#resetButton:hover {
-  background-color: pink;
+footer {
+  height: 100px;
 }
