@@ -29,7 +29,7 @@ var boardGame = {};
     if (boardGame[square] != undefined) {
       return;
     } else {
-      // if / else to input correct image and update whose turn it is
+      // if / else to input correct image, update whose turn it is, and update header
       if ((isPlayerOnesTurn == true) && (haveAWinner == false)) {
         boardGame[square] = "player1";
         $(id).css("background-image", "url('images/coffee.png')");
@@ -60,7 +60,7 @@ var boardGame = {};
        ((boardGame["a1"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c3"]) && boardGame["c3"] != undefined) ||
        // diagnol bottom to top winner
        ((boardGame["a3"] == boardGame["b2"]) && (boardGame["b2"] == boardGame["c1"]) && boardGame["c1"] != undefined))
-       {
+       { // updating alerts to be specific to the winner
             if (isPlayerOnesTurn == true) {
             alert("Craft beer is the winner! Hit reset to play again");
           } else {
