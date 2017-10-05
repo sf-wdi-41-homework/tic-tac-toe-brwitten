@@ -2,6 +2,7 @@
 $(document).ready(function() {
 
 // adding listeners to call the imageApper function for each square
+    // nice ...but could do this on the box class as a forEach ...
   $('#a1').on('click', imageAppear);
   $('#a2').on('click', imageAppear);
   $('#a3').on('click', imageAppear);
@@ -14,6 +15,7 @@ $(document).ready(function() {
 
 });
 
+// Beautiful naming ...
 var isPlayerOnesTurn = true;
 var haveAWinner = false;
 var boardGame = {};
@@ -23,10 +25,12 @@ var boardGame = {};
 
 // function to update square image to icon
   function imageAppear(event){
+      // clever use of currentTarget though I think id and square are reversed here
     var id = event.currentTarget; // identifying DOM object that was clicked
     var square = event.currentTarget.id; // storing specific ID that was clicked
     // checking to see if the square that was clicked is listed in object
     if (boardGame[square] != undefined) {
+        // Do we need the else clause at all?
       return;
     } else {
       // if / else to input correct image, update whose turn it is, and update header
